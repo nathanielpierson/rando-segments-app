@@ -1,2 +1,3 @@
-json.extract! level, :id, :created_at, :updated_at
-json.url level_url(level, format: :json)
+json.id   level.id
+json.name level.name
+json.type level.type
