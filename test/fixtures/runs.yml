@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  level_id: MyString
+  seconds: MyString
+  integer: MyString
+
+two:
+  level_id: MyString
+  seconds: MyString
+  integer: MyString
