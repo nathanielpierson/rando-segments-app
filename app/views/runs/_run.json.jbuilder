@@ -1,3 +1,5 @@
-json.id       run.id
-json.level_id run.level_id
-json.seconds  run.seconds
+json.id           run.id
+json.level        run.level
+json.seconds      run.seconds
+json.minutes      run.minutes
+json.milliseconds run.milliseconds
