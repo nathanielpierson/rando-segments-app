@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_04_22_211504) do
+ActiveRecord::Schema[8.0].define(version: 2025_05_07_182356) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -21,5 +21,15 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_22_211504) do
     t.integer "avg_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "runs", force: :cascade do |t|
+    t.integer "level_id"
+    t.integer "seconds"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.datetime "date_performed"
+    t.integer "minutes"
+    t.float "milliseconds"
   end
 end

@@ -1,0 +1,5 @@
+class AddPerformedDateToRuns < ActiveRecord::Migration[8.0]
+  def change
+    add_column :runs, :date_performed, :datetime
+  end
+end
