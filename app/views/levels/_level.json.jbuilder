@@ -1,6 +1,11 @@
-json.id       level.id
-json.name     level.name
-json.category level.category
-json.fastest_time level.fastest_time
-json.avg_time level.avg_time
-json.runs     level.runs
+json.id                 level.id
+json.name               level.name
+json.category           level.category
+json.fastest_time_min   level.fastest_time_min
+json.fastest_time_sec   level.fastest_time_sec
+json.fastest_time_milli level.fastest_time_milli
+json.fastest_time_id    level.fastest_time_id
+json.avg_time_min       level.avg_time_min
+json.avg_time_sec       level.avg_time_sec
+json.avg_time_milli     level.avg_time_milli
+json.runs               level.runs

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get "/levels/:id" => "levels#show"
   put "/levels/:id" => "levels#update"
 
-  get "fastest_time/:id" => "levels#fastest_time"
+  # get "fastest_time/:id" => "levels#fastest_time"
 
   get "/runs" => "runs#index"
   get "/runs/:id" => "runs#show"
