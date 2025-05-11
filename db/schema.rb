@@ -10,17 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_05_07_182356) do
+ActiveRecord::Schema[8.0].define(version: 2025_05_11_133637) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
   create_table "levels", force: :cascade do |t|
     t.string "name"
     t.string "category"
-    t.integer "fastest_time"
-    t.integer "avg_time"
+    t.integer "fastest_time_min"
+    t.integer "avg_time_min"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "fastest_time_sec"
+    t.integer "fastest_time_milli"
+    t.integer "avg_time_sec"
+    t.integer "avg_time_milli"
   end
 
   create_table "runs", force: :cascade do |t|
