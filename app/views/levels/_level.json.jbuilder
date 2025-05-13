@@ -9,3 +9,4 @@ json.avg_time_min       level.avg_time_min
 json.avg_time_sec       level.avg_time_sec
 json.avg_time_milli     level.avg_time_milli
 json.runs               level.runs
+json.image_url          level.image_url
