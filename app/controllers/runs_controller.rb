@@ -13,8 +13,9 @@ class RunsController < ApplicationController
       date_performed: params[:date_performed],
       minutes: params[:minutes],
       seconds: params[:seconds],
-      milliseconds: params[:milliseconds]
+      milliseconds: params[:milliseconds] || params[:frames].to_i / 60
     )
+    p params[:frames]
     render :show
   end
   def update

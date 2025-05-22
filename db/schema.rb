@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_05_12_220926) do
+ActiveRecord::Schema[8.0].define(version: 2025_05_22_201322) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -27,6 +27,9 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_12_220926) do
     t.integer "avg_time_milli"
     t.integer "fastest_time_id"
     t.string "image_url"
+    t.integer "official_course_number"
+    t.string "ocean_owl_image_url"
+    t.string "official_image_url"
   end
 
   create_table "runs", force: :cascade do |t|
