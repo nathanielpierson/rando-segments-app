@@ -32,3 +32,5 @@ Level.create(name: "Wing Mario over the Rainbow", category: "secret")
 Level.create(name: "Bowser in the Dark World", category: "secret")
 Level.create(name: "Bowser in the Fire Sea", category: "secret")
 Level.create(name: "Bowser in the Sky", category: "secret")
+
+# Star.create(name: "" level)
