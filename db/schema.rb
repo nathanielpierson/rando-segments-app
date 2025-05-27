@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_05_22_205246) do
+ActiveRecord::Schema[8.0].define(version: 2025_05_27_213326) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -49,5 +49,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_22_205246) do
     t.boolean "is_unique"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "star_number"
   end
 end
