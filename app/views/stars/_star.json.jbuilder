@@ -1,2 +1,5 @@
-json.extract! star, :id, :created_at, :updated_at
-json.url star_url(star, format: :json)
+json.id          star.id
+json.level       star.level
+json.star_type   star.star_type
+json.is_unique   star.is_unique
+json.star_number star.star_number

@@ -35,169 +35,171 @@ Level.create!([
   { name: "Wing Mario over the Rainbow", category: "secret", official_course_number: 24 }
 ])
 
+levels_by_course = Level.all.index_by(&:official_course_number)
+
 Star.create!([
   # Bob-omb Battlefield (level_id: 1)
-  { name: "Big Bob-omb on the Summit", level_id: 1, star_number: 1, star_type: "boss", is_unique: "true" },
-  { name: "Footrace with Koopa the Quick", level_id: 1, star_number: 2, star_type: "spawn", is_unique: "true" },
-  { name: "Shoot to the Island in the Sky", level_id: 1, star_number: 3, star_type: "box", is_unique: "true" },
-  { name: "Find the 8 Red Coins", level_id: 1, star_number: 4, star_type: "reds", is_unique: "true" },
-  { name: "Mario Wings to the Sky", level_id: 1, star_number: 5, star_type: "secrets", is_unique: "true" },
-  { name: "Behind Chain Chomp’s Gate", level_id: 1, star_number: 6, star_type: "naked", is_unique: "true" },
-  { name: "Bob-omb Battlefield 100 Coins", level_id: 1, star_number: 7, star_type: "100c", is_unique: "true" },
+  { name: "Big Bob-omb on the Summit", level: levels_by_course[1], star_number: 1, star_type: "boss", is_unique: "true" },
+  { name: "Footrace with Koopa the Quick", level: levels_by_course[1], star_number: 2, star_type: "spawn", is_unique: "true" },
+  { name: "Shoot to the Island in the Sky", level: levels_by_course[1], star_number: 3, star_type: "box", is_unique: "true" },
+  { name: "Find the 8 Red Coins", level: levels_by_course[1], star_number: 4, star_type: "reds", is_unique: "true" },
+  { name: "Mario Wings to the Sky", level: levels_by_course[1], star_number: 5, star_type: "secrets", is_unique: "true" },
+  { name: "Behind Chain Chomp’s Gate", level: levels_by_course[1], star_number: 6, star_type: "naked", is_unique: "true" },
+  { name: "Bob-omb Battlefield 100 Coins", level: levels_by_course[1], star_number: 7, star_type: "100c", is_unique: "true" },
 
-  # Whomp's Fortress (level_id: 2)
-  { name: "Chip off Whomp’s Block", level_id: 2, star_number: 1, star_type: "boss", is_unique: "true" },
-  { name: "To the Top of the Fortress", level_id: 2, star_number: 2, star_type: "naked", is_unique: "false" },
-  { name: "Shoot into the Wild Blue", level_id: 2, star_number: 3, star_type: "naked", is_unique: "false" },
-  { name: "Red Coins on the Floating Isle", level_id: 2, star_number: 4, star_type: "reds", is_unique: "true" },
-  { name: "Fall onto the Caged Island", level_id: 2, star_number: 5, star_type: "naked", is_unique: "false" },
-  { name: "Blast Away the Wall", level_id: 2, star_number: 6, star_type: "naked", is_unique: "false" },
-  { name: "Whomp's Fortress 100 Coins", level_id: 2, star_number: 7, star_type: "100c", is_unique: "true" },
+  # Whomp's Fortress (official course id: 2)
+  { name: "Chip off Whomp’s Block", level: levels_by_course[2], star_number: 1, star_type: "boss", is_unique: "true" },
+  { name: "To the Top of the Fortress", level: levels_by_course[2], star_number: 2, star_type: "naked", is_unique: "false" },
+  { name: "Shoot into the Wild Blue", level: levels_by_course[2], star_number: 3, star_type: "naked", is_unique: "false" },
+  { name: "Red Coins on the Floating Isle", level: levels_by_course[2], star_number: 4, star_type: "reds", is_unique: "true" },
+  { name: "Fall onto the Caged Island", level: levels_by_course[2], star_number: 5, star_type: "naked", is_unique: "false" },
+  { name: "Blast Away the Wall", level: levels_by_course[2], star_number: 6, star_type: "naked", is_unique: "false" },
+  { name: "Whomp's Fortress 100 Coins", level: levels_by_course[2], star_number: 7, star_type: "100c", is_unique: "true" },
 
-  # Jolly Roger Bay (level_id: 3)
-  { name: "Plunder in the Sunken Ship", level_id: 3, star_number: 1, star_type: "spawn", is_unique: "true" },
-  { name: "Can the Eel Come out and Play?", level_id: 3, star_number: 2, star_type: "spawn", is_unique: "true" },
-  { name: "Treasure of the Ocean Cave", level_id: 3, star_number: 3, star_type: "spawn", is_unique: "true" },
-  { name: "Red Coins on the Ship Afloat", level_id: 3, star_number: 4, star_type: "reds", is_unique: "true" },
-  { name: "Blast to the Stone Pillar", level_id: 3, star_number: 5, star_type: "box", is_unique: "true" },
-  { name: "Through the Jet Stream", level_id: 3, star_number: 6, star_type: "naked", is_unique: "true" },
-  { name: "Jolly Roger Bay 100 Coins", level_id: 3, star_number: 7, star_type: "100c", is_unique: "true" },
+  # Jolly Roger Bay (official course id: 3)
+  { name: "Plunder in the Sunken Ship", level: levels_by_course[3], star_number: 1, star_type: "spawn", is_unique: "true" },
+  { name: "Can the Eel Come out and Play?", level: levels_by_course[3], star_number: 2, star_type: "spawn", is_unique: "true" },
+  { name: "Treasure of the Ocean Cave", level: levels_by_course[3], star_number: 3, star_type: "spawn", is_unique: "true" },
+  { name: "Red Coins on the Ship Afloat", level: levels_by_course[3], star_number: 4, star_type: "reds", is_unique: "true" },
+  { name: "Blast to the Stone Pillar", level: levels_by_course[3], star_number: 5, star_type: "box", is_unique: "true" },
+  { name: "Through the Jet Stream", level: levels_by_course[3], star_number: 6, star_type: "naked", is_unique: "true" },
+  { name: "Jolly Roger Bay 100 Coins", level: levels_by_course[3], star_number: 7, star_type: "100c", is_unique: "true" },
 
-  # Cool, Cool Mountain (level_id: 4)
-  { name: "Slip Slidin’ Away", level_id: 4, star_number: 1, star_type: "spawn", is_unique: "true" },
-  { name: "Li’l Penguin Lost", level_id: 4, star_number: 2, star_type: "spawn", is_unique: "true" },
-  { name: "Big Penguin Race", level_id: 4, star_number: 3, star_type: "spawn", is_unique: "true" },
-  { name: "Frosty Slide for 8 Red Coins", level_id: 4, star_number: 4, star_type: "reds", is_unique: "true" },
-  { name: "Snowman’s Lost his Head", level_id: 4, star_number: 5, star_type: "spawn", is_unique: "true" },
-  { name: "Wall Kicks will Work", level_id: 4, star_number: 6, star_type: "naked", is_unique: "true" },
-  { name: "Cool, Cool Mountain 100 Coins", level_id: 4, star_number: 7, star_type: "100c", is_unique: "true" },
+  # Cool, Cool Mountain (official course id: 4)
+  { name: "Slip Slidin’ Away", level: levels_by_course[4], star_number: 1, star_type: "spawn", is_unique: "true" },
+  { name: "Li’l Penguin Lost", level: levels_by_course[4], star_number: 2, star_type: "spawn", is_unique: "true" },
+  { name: "Big Penguin Race", level: levels_by_course[4], star_number: 3, star_type: "spawn", is_unique: "true" },
+  { name: "Frosty Slide for 8 Red Coins", level: levels_by_course[4], star_number: 4, star_type: "reds", is_unique: "true" },
+  { name: "Snowman’s Lost his Head", level: levels_by_course[4], star_number: 5, star_type: "spawn", is_unique: "true" },
+  { name: "Wall Kicks will Work", level: levels_by_course[4], star_number: 6, star_type: "naked", is_unique: "true" },
+  { name: "Cool, Cool Mountain 100 Coins", level: levels_by_course[4], star_number: 7, star_type: "100c", is_unique: "true" },
 
-  # Big Boo's Haunt (level_id: 5)
-  { name: "Go on a Ghost Hunt", level_id: 5, star_number: 1, star_type: "spawn", is_unique: "true" },
-  { name: "Ride Big Boo’s Merry-Go-Round", level_id: 5, star_number: 2, star_type: "spawn", is_unique: "true" },
-  { name: "Secret of the Haunted Books", level_id: 5, star_number: 3, star_type: "naked", is_unique: "true" },
-  { name: "Seek the 8 Red Coins", level_id: 5, star_number: 4, star_type: "reds", is_unique: "true" },
-  { name: "Big Boo’s Balcony", level_id: 5, star_number: 5, star_type: "spawn", is_unique: "true" },
-  { name: "Eye to Eye in the Secret Room", level_id: 5, star_number: 6, star_type: "spawn", is_unique: "true" },
-  { name: "Big Boo’s Haunt 100 Coins", level_id: 5, star_number: 7, star_type: "100c", is_unique: "true" },
+  # Big Boo's Haunt (official course id: 5)
+  { name: "Go on a Ghost Hunt", level: levels_by_course[5], star_number: 1, star_type: "spawn", is_unique: "true" },
+  { name: "Ride Big Boo’s Merry-Go-Round", level: levels_by_course[5], star_number: 2, star_type: "spawn", is_unique: "true" },
+  { name: "Secret of the Haunted Books", level: levels_by_course[5], star_number: 3, star_type: "naked", is_unique: "true" },
+  { name: "Seek the 8 Red Coins", level: levels_by_course[5], star_number: 4, star_type: "reds", is_unique: "true" },
+  { name: "Big Boo’s Balcony", level: levels_by_course[5], star_number: 5, star_type: "spawn", is_unique: "true" },
+  { name: "Eye to Eye in the Secret Room", level: levels_by_course[5], star_number: 6, star_type: "spawn", is_unique: "true" },
+  { name: "Big Boo’s Haunt 100 Coins", level: levels_by_course[5], star_number: 7, star_type: "100c", is_unique: "true" },
 
-  # Hazy Maze Cave (level_id: 6)
-  { name: "Swimming Beast in the Cavern", level_id: 6, star_number: 1, star_type: "naked", is_unique: "false" },
-  { name: "Elevate for 8 Red Coins", level_id: 6, star_number: 2, star_type: "reds", is_unique: "true" },
-  { name: "Metal-Head Mario Can Move!", level_id: 6, star_number: 3, star_type: "naked", is_unique: "false" },
-  { name: "Navigating the Toxic Maze", level_id: 6, star_number: 4, star_type: "naked", is_unique: "false" },
-  { name: "A-Maze-ing Emergency Exit", level_id: 6, star_number: 5, star_type: "naked", is_unique: "false" },
-  { name: "Watch for the Rolling Rocks", level_id: 6, star_number: 6, star_type: "naked", is_unique: "false" },
-  { name: "Hazy Maze Cave 100 Coins", level_id: 6, star_number: 7, star_type: "100c", is_unique: "true" },
+  # Hazy Maze Cave (official course id: 6)
+  { name: "Swimming Beast in the Cavern", level: levels_by_course[6], star_number: 1, star_type: "naked", is_unique: "false" },
+  { name: "Elevate for 8 Red Coins", level: levels_by_course[6], star_number: 2, star_type: "reds", is_unique: "true" },
+  { name: "Metal-Head Mario Can Move!", level: levels_by_course[6], star_number: 3, star_type: "naked", is_unique: "false" },
+  { name: "Navigating the Toxic Maze", level: levels_by_course[6], star_number: 4, star_type: "naked", is_unique: "false" },
+  { name: "A-Maze-ing Emergency Exit", level: levels_by_course[6], star_number: 5, star_type: "naked", is_unique: "false" },
+  { name: "Watch for the Rolling Rocks", level: levels_by_course[6], star_number: 6, star_type: "naked", is_unique: "false" },
+  { name: "Hazy Maze Cave 100 Coins", level: levels_by_course[6], star_number: 7, star_type: "100c", is_unique: "true" },
 
-  # Lethal Lava Land (level_id: 7)
-  { name: "Boil the Big Bully", level_id: 7, star_number: 1, star_type: "boss", is_unique: "true" },
-  { name: "Bully the Bullies", level_id: 7, star_number: 2, star_type: "boss", is_unique: "true" },
-  { name: "8-Coin Puzzle with 15 Pieces", level_id: 7, star_number: 3, star_type: "reds", is_unique: "true" },
-  { name: "Red-Hot Log Rolling", level_id: 7, star_number: 4, star_type: "naked", is_unique: "true" },
-  { name: "Hot-Foot-It into the Volcano", level_id: 7, star_number: 5, star_type: "naked", is_unique: "false" },
-  { name: "Elevator Tour in the Volcano", level_id: 7, star_number: 6, star_type: "naked", is_unique: "false" },
-  { name: "Lethal Lava Land 100 Coins", level_id: 7, star_number: 7, star_type: "100c", is_unique: "100c" },
+  # Lethal Lava Land (official course id: 7)
+  { name: "Boil the Big Bully", level: levels_by_course[7], star_number: 1, star_type: "boss", is_unique: "true" },
+  { name: "Bully the Bullies", level: levels_by_course[7], star_number: 2, star_type: "boss", is_unique: "true" },
+  { name: "8-Coin Puzzle with 15 Pieces", level: levels_by_course[7], star_number: 3, star_type: "reds", is_unique: "true" },
+  { name: "Red-Hot Log Rolling", level: levels_by_course[7], star_number: 4, star_type: "naked", is_unique: "true" },
+  { name: "Hot-Foot-It into the Volcano", level: levels_by_course[7], star_number: 5, star_type: "naked", is_unique: "false" },
+  { name: "Elevator Tour in the Volcano", level: levels_by_course[7], star_number: 6, star_type: "naked", is_unique: "false" },
+  { name: "Lethal Lava Land 100 Coins", level: levels_by_course[7], star_number: 7, star_type: "100c", is_unique: "100c" },
 
-  # Shifting Sand Land (level_id: 8)
-  { name: "In the Talons of the Big Bird", level_id: 8, star_number: 1, star_type: "spawn", is_unique: "true" },
-  { name: "Shining Atop the Pyramid", level_id: 8, star_number: 2, star_type: "naked", is_unique: "true" },
-  { name: "Inside the Ancient Pyramid", level_id: 8, star_number: 3, star_type: "naked", is_unique: "true" },
-  { name: "Stand Tall on the Four Pillars", level_id: 8, star_number: 4, star_type: "boss", is_unique: "true" },
-  { name: "Free Flying for 8 Red Coins", level_id: 8, star_number: 5, star_type: "reds", is_unique: "true" },
-  { name: "Pyramid Puzzle", level_id: 8, star_number: 6, star_type: "secrets", is_unique: "true" },
-  { name: "Shifting Sand Land 100 Coins", level_id: 8, star_number: 7, star_type: "100c", is_unique: "true" },
+  # Shifting Sand Land (official course id: 8)
+  { name: "In the Talons of the Big Bird", level: levels_by_course[8], star_number: 1, star_type: "spawn", is_unique: "true" },
+  { name: "Shining Atop the Pyramid", level: levels_by_course[8], star_number: 2, star_type: "naked", is_unique: "true" },
+  { name: "Inside the Ancient Pyramid", level: levels_by_course[8], star_number: 3, star_type: "naked", is_unique: "true" },
+  { name: "Stand Tall on the Four Pillars", level: levels_by_course[8], star_number: 4, star_type: "boss", is_unique: "true" },
+  { name: "Free Flying for 8 Red Coins", level: levels_by_course[8], star_number: 5, star_type: "reds", is_unique: "true" },
+  { name: "Pyramid Puzzle", level: levels_by_course[8], star_number: 6, star_type: "secrets", is_unique: "true" },
+  { name: "Shifting Sand Land 100 Coins", level: levels_by_course[8], star_number: 7, star_type: "100c", is_unique: "true" },
 
   # Dire, Dire Docks (level_id: 9)
-  { name: "Board Bowser’s Sub", level_id: 9, star_number: 1, star_type: "naked", is_unique: "false" },
-  { name: "Chests in the Current", level_id: 9, star_number: 2, star_type: "spawn", is_unique: "true" },
-  { name: "Pole-Jumping for Red Coins", level_id: 9, star_number: 3, star_type: "reds", is_unique: "true" },
-  { name: "Through the Jet Stream", level_id: 9, star_number: 4, star_type: "naked", is_unique: "true" },
-  { name: "The Manta Ray’s Reward", level_id: 9, star_number: 5, star_type: "spawn", is_unique: "true" },
-  { name: "Collect the Caps", level_id: 9, star_number: 6, star_type: "naked", is_unique: "false" },
-  { name: "Dire, Dire Docks 100 Coins", level_id: 9, star_number: 7, star_type: "100c", is_unique: "true" },
+  { name: "Board Bowser’s Sub", level: levels_by_course[9], star_number: 1, star_type: "naked", is_unique: "false" },
+  { name: "Chests in the Current", level: levels_by_course[9], star_number: 2, star_type: "spawn", is_unique: "true" },
+  { name: "Pole-Jumping for Red Coins", level: levels_by_course[9], star_number: 3, star_type: "reds", is_unique: "true" },
+  { name: "Through the Jet Stream", level: levels_by_course[9], star_number: 4, star_type: "naked", is_unique: "true" },
+  { name: "The Manta Ray’s Reward", level: levels_by_course[9], star_number: 5, star_type: "spawn", is_unique: "true" },
+  { name: "Collect the Caps", level: levels_by_course[9], star_number: 6, star_type: "naked", is_unique: "false" },
+  { name: "Dire, Dire Docks 100 Coins", level: levels_by_course[9], star_number: 7, star_type: "100c", is_unique: "true" },
 
   # Snowman's Land (level_id: 10)
-  { name: "Snowman's Big Head", level_id: 10, star_number: 1, star_type: "naked", is_unique: "false" },
-  { name: "Chill with the Bully", level_id: 10, star_number: 2, star_type: "spawn", is_unique: "true" },
-  { name: "In the Deep Freeze", level_id: 10, star_number: 3, star_type: "naked", is_unique: "false" },
-  { name: "Whirl from the Freezing Pond", level_id: 10, star_number: 4, star_type: "box", is_unique: "true" },
-  { name: "Shell Shreddin' for 8 Red Coins", level_id: 10, star_number: 5, star_type: "reds", is_unique: "true" },
-  { name: "Into the Igloo", level_id: 10, star_number: 6, star_type: "naked", is_unique: "true" },
-  { name: "Snowman's Land 100 Coins", level_id: 10, star_number: 7, star_type: "100c", is_unique: "true" },
+  { name: "Snowman's Big Head", level: levels_by_course[10], star_number: 1, star_type: "naked", is_unique: "false" },
+  { name: "Chill with the Bully", level: levels_by_course[10], star_number: 2, star_type: "spawn", is_unique: "true" },
+  { name: "In the Deep Freeze", level: levels_by_course[10], star_number: 3, star_type: "naked", is_unique: "false" },
+  { name: "Whirl from the Freezing Pond", level: levels_by_course[10], star_number: 4, star_type: "box", is_unique: "true" },
+  { name: "Shell Shreddin' for 8 Red Coins", level: levels_by_course[10], star_number: 5, star_type: "reds", is_unique: "true" },
+  { name: "Into the Igloo", level: levels_by_course[10], star_number: 6, star_type: "naked", is_unique: "true" },
+  { name: "Snowman's Land 100 Coins", level: levels_by_course[10], star_number: 7, star_type: "100c", is_unique: "true" },
 
   # Wet-Dry World (level_id: 11)
-  { name: "Shocking Arrow Lifts!", level_id: 11, star_number: 1, star_type: "box", is_unique: "false" },
-  { name: "Top o' the Town", level_id: 11, star_number: 2, star_type: "box", is_unique: "false" },
-  { name: "Secrets in the Shallows and Sky", level_id: 11, star_number: 3, star_type: "secrets", is_unique: "true" },
-  { name: "Express Elevator--Hurry Up!", level_id: 11, star_number: 4, star_type: "naked", is_unique: "true" },
-  { name: "Go to Town for Red Coins", level_id: 11, star_number: 5, star_type: "reds", is_unique: "true" },
-  { name: "Quick Race Through Downtown!", level_id: 11, star_number: 6, star_type: "naked", is_unique: "true" },
-  { name: "Wet-Dry World 100 Coins", level_id: 11, star_number: 7, star_type: "100c", is_unique: "true" },
+  { name: "Shocking Arrow Lifts!", level: levels_by_course[11], star_number: 1, star_type: "box", is_unique: "false" },
+  { name: "Top o' the Town", level: levels_by_course[11], star_number: 2, star_type: "box", is_unique: "false" },
+  { name: "Secrets in the Shallows and Sky", level: levels_by_course[11], star_number: 3, star_type: "secrets", is_unique: "true" },
+  { name: "Express Elevator--Hurry Up!", level: levels_by_course[11], star_number: 4, star_type: "naked", is_unique: "true" },
+  { name: "Go to Town for Red Coins", level: levels_by_course[11], star_number: 5, star_type: "reds", is_unique: "true" },
+  { name: "Quick Race Through Downtown!", level: levels_by_course[11], star_number: 6, star_type: "naked", is_unique: "true" },
+  { name: "Wet-Dry World 100 Coins", level: levels_by_course[11], star_number: 7, star_type: "100c", is_unique: "true" },
 
   # Tall, Tall Mountain (level_id: 12)
-  { name: "Scale the Mountain", level_id: 12, star_number: 1, star_type: "naked", is_unique: "false" },
-  { name: "Mystery of the Monkey Cage", level_id: 12, star_number: 2, star_type: "spawn", is_unique: "true" },
-  { name: "Scary 'Shrooms, Red Coins", level_id: 12, star_number: 3, star_type: "reds", is_unique: "true" },
-  { name: "Mysterious Mountainside", level_id: 12, star_number: 4, star_type: "naked", is_unique: "false" },
-  { name: "Breathtaking View from Bridge", level_id: 12, star_number: 5, star_type: "naked", is_unique: "false" },
-  { name: "Blast to the Lonely Mushroom", level_id: 12, star_number: 6, star_type: "naked", is_unique: "false" },
-  { name: "Tall, Tall Mountain 100 Coins", level_id: 12, star_number: 7, star_type: "100c", is_unique: "true" },
+  { name: "Scale the Mountain", level: levels_by_course[12], star_number: 1, star_type: "naked", is_unique: "false" },
+  { name: "Mystery of the Monkey Cage", level: levels_by_course[12], star_number: 2, star_type: "spawn", is_unique: "true" },
+  { name: "Scary 'Shrooms, Red Coins", level: levels_by_course[12], star_number: 3, star_type: "reds", is_unique: "true" },
+  { name: "Mysterious Mountainside", level: levels_by_course[12], star_number: 4, star_type: "naked", is_unique: "false" },
+  { name: "Breathtaking View from Bridge", level: levels_by_course[12], star_number: 5, star_type: "naked", is_unique: "false" },
+  { name: "Blast to the Lonely Mushroom", level: levels_by_course[12], star_number: 6, star_type: "naked", is_unique: "false" },
+  { name: "Tall, Tall Mountain 100 Coins", level: levels_by_course[12], star_number: 7, star_type: "100c", is_unique: "true" },
 
   # Tiny-Huge Island (level_id: 13)
-  { name: "Pluck the Piranha Flower", level_id: 13, star_number: 1, star_type: "spawn", is_unique: "true" },
-  { name: "The Tip Top of the Huge Island", level_id: 13, star_number: 2, star_type: "box", is_unique: "true" },
-  { name: "Rematch with Koopa the Quick", level_id: 13, star_number: 3, star_type: "false", is_unique: "true" },
-  { name: "Five Itty Bitty Secrets", level_id: 13, star_number: 4, star_type: "secrets", is_unique: "true" },
-  { name: "Wiggler's Red Coins", level_id: 13, star_number: 5, star_type: "reds", is_unique: "true" },
-  { name: "Make Wiggler Squirm", level_id: 13, star_number: 6, star_type: "boss", is_unique: "true" },
-  { name: "Tiny-Huge Island 100 Coins", level_id: 13, star_number: 7, star_type: "100c", is_unique: "true" },
+  { name: "Pluck the Piranha Flower", level: levels_by_course[13], star_number: 1, star_type: "spawn", is_unique: "true" },
+  { name: "The Tip Top of the Huge Island", level: levels_by_course[13], star_number: 2, star_type: "box", is_unique: "true" },
+  { name: "Rematch with Koopa the Quick", level: levels_by_course[13], star_number: 3, star_type: "false", is_unique: "true" },
+  { name: "Five Itty Bitty Secrets", level: levels_by_course[13], star_number: 4, star_type: "secrets", is_unique: "true" },
+  { name: "Wiggler's Red Coins", level: levels_by_course[13], star_number: 5, star_type: "reds", is_unique: "true" },
+  { name: "Make Wiggler Squirm", level: levels_by_course[13], star_number: 6, star_type: "boss", is_unique: "true" },
+  { name: "Tiny-Huge Island 100 Coins", level: levels_by_course[13], star_number: 7, star_type: "100c", is_unique: "true" },
 
   # Tick Tock Clock (level_id: 14)
-  { name: "Roll into the Cage", level_id: 14, star_number: 1, star_type: "naked", is_unique: "false" },
-  { name: "The Pit and the Pendulums", level_id: 14, star_number: 2, star_type: "naked", is_unique: "false" },
-  { name: "Get a Hand", level_id: 14, star_number: 3, star_type: "naked", is_unique: "false" },
-  { name: "Stomp on the Thwomp", level_id: 14, star_number: 4, star_type: "naked", is_unique: "false" },
-  { name: "Timed Jumps on Moving Bars", level_id: 14, star_number: 5, star_type: "naked", is_unique: "false" },
-  { name: "Stop Time for Red Coins", level_id: 14, star_number: 6, star_type: "reds", is_unique: "true" },
-  { name: "Tick Tock Clock 100 Coins", level_id: 14, star_number: 7, star_type: "100c", is_unique: "true" },
+  { name: "Roll into the Cage", level: levels_by_course[14], star_number: 1, star_type: "naked", is_unique: "false" },
+  { name: "The Pit and the Pendulums", level: levels_by_course[14], star_number: 2, star_type: "naked", is_unique: "false" },
+  { name: "Get a Hand", level: levels_by_course[14], star_number: 3, star_type: "naked", is_unique: "false" },
+  { name: "Stomp on the Thwomp", level: levels_by_course[14], star_number: 4, star_type: "naked", is_unique: "false" },
+  { name: "Timed Jumps on Moving Bars", level: levels_by_course[14], star_number: 5, star_type: "naked", is_unique: "false" },
+  { name: "Stop Time for Red Coins", level: levels_by_course[14], star_number: 6, star_type: "reds", is_unique: "true" },
+  { name: "Tick Tock Clock 100 Coins", level: levels_by_course[14], star_number: 7, star_type: "100c", is_unique: "true" },
 
   # Rainbow Ride (level_id: 15)
-  { name: "Cruiser Crossing the Rainbow", level_id: 15, star_number: 1, star_type: "naked", is_unique: "false" },
-  { name: "The Big House in the Sky", level_id: 15, star_number: 2, star_type: "naked", is_unique: "false" },
-  { name: "Coins Amassed in a Maze", level_id: 15, star_number: 3, star_type: "reds", is_unique: "true" },
-  { name: "Swingin' in the Breeze", level_id: 15, star_number: 4, star_type: "naked", is_unique: "false" },
-  { name: "Tricky Triangles!", level_id: 15, star_number: 5, star_type: "naked", is_unique: "false" },
-  { name: "Somewhere Over the Rainbow", level_id: 15, star_number: 6, star_type: "box", is_unique: "true" },
-  { name: "Rainbow Ride 100 Coins", level_id: 15, star_number: 7, star_type: "100c", is_unique: "true" },
+  { name: "Cruiser Crossing the Rainbow", level: levels_by_course[15], star_number: 1, star_type: "naked", is_unique: "false" },
+  { name: "The Big House in the Sky", level: levels_by_course[15], star_number: 2, star_type: "naked", is_unique: "false" },
+  { name: "Coins Amassed in a Maze", level: levels_by_course[15], star_number: 3, star_type: "reds", is_unique: "true" },
+  { name: "Swingin' in the Breeze", level: levels_by_course[15], star_number: 4, star_type: "naked", is_unique: "false" },
+  { name: "Tricky Triangles!", level: levels_by_course[15], star_number: 5, star_type: "naked", is_unique: "false" },
+  { name: "Somewhere Over the Rainbow", level: levels_by_course[15], star_number: 6, star_type: "box", is_unique: "true" },
+  { name: "Rainbow Ride 100 Coins", level: levels_by_course[15], star_number: 7, star_type: "100c", is_unique: "true" },
 
   # Princess Peach's Secret Slide (level_id: 16)
-  { name: "The Princess's Secret Slide", level_id: 16, star_number: 1, star_type: "box", is_unique: true },
-  { name: "The Princess's Secret Slide (Under 21 Seconds)", level_id: 16, star_number: 2, star_type: "spawn", is_unique: true },
+  { name: "The Princess's Secret Slide", level: levels_by_course[16], star_number: 1, star_type: "box", is_unique: true },
+  { name: "The Princess's Secret Slide (Under 21 Seconds)", level: levels_by_course[16], star_number: 2, star_type: "spawn", is_unique: true },
 
   # Aquarium (level_id: 17)
-  { name: "The Secret Aquarium", level_id: 17, star_number: 1, star_type: "reds", is_unique: true },
+  { name: "The Secret Aquarium", level: levels_by_course[17], star_number: nil, star_type: "reds", is_unique: true },
 
   # Wing Cap (level_id: 18)
-  { name: "Tower of the Wing Cap", level_id: 18, star_number: 1, star_type: "reds", is_unique: true },
+  { name: "Tower of the Wing Cap", level: levels_by_course[18], star_number: nil, star_type: "reds", is_unique: true },
 
   # Metal Cap (level_id: 19)
-  { name: "Cavern of the Metal Cap", level_id: 19, star_number: 1, star_type: "reds", is_unique: true },
+  { name: "Cavern of the Metal Cap", level: levels_by_course[19], star_number: nil, star_type: "reds", is_unique: true },
 
   # Vanish Cap (level_id: 20)
-  { name: "Vanish Cap Under the Moat", level_id: 20, star_number: 1, star_type: "reds", is_unique: true },
+  { name: "Vanish Cap Under the Moat", level: levels_by_course[20], star_number: nil, star_type: "reds", is_unique: true },
 
   # Bowser in the Dark World (level_id: 21)
-  { name: "Bowser in the Dark World Red Coins", level_id: 21, star_number: 1, star_type: "reds", is_unique: true },
+  { name: "Bowser in the Dark World Red Coins", level: levels_by_course[21], star_number: nil, star_type: "reds", is_unique: true },
 
   # Bowser in the Fire Sea (level_id: 22)
-  { name: "Bowser in the Fire Sea Red Coins", level_id: 22, star_number: 1, star_type: "reds", is_unique: true },
+  { name: "Bowser in the Fire Sea Red Coins", level: levels_by_course[22], star_number: nil, star_type: "reds", is_unique: true },
 
   # Bowser in the Sky (level_id: 23)
-  { name: "Bowser in the Sky Red Coins", level_id: 23, star_number: 1, star_type: "reds", is_unique: true },
+  { name: "Bowser in the Sky Red Coins", level: levels_by_course[23], star_number: nil, star_type: "reds", is_unique: true },
 
   # Wing Mario over the Rainbow (level_id: 24)
-  { name: "Wing Mario Over the Rainbow", level_id: 24, star_number: 1, star_type: "reds", is_unique: true },
+  { name: "Wing Mario Over the Rainbow", level: levels_by_course[24], star_number: nil, star_type: "reds", is_unique: true },
 
   # Toad Stars (no specific level_id)
   { name: "Toad's First Star", level_id: nil, star_number: nil, star_type: "toad", is_unique: true },
@@ -209,7 +211,6 @@ Star.create!([
   { name: "MIPS the Rabbit (Second Catch)", level_id: nil, star_number: nil, star_type: "mips", is_unique: true }
 ])
 
-levels_by_course = Level.all.index_by(&:official_course_number)
 
 Run.create!([
   # Bob-omb Battlefield runs
