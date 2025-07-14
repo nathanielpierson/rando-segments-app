@@ -1,29 +1,73 @@
 Level.create!([
-  { name: "Bob-omb Battlefield", category: "stage", official_course_number: 1 },
-  { name: "Whomp's Fortress", category: "stage", official_course_number: 2 },
-  { name: "Jolly Roger Bay", category: "stage", official_course_number: 3 },
-  { name: "Cool, Cool Mountain", category: "stage", official_course_number: 4 },
-  { name: "Big Boo's Haunt", category: "stage", official_course_number: 5 },
-  { name: "Hazy Maze Cave", category: "stage", official_course_number: 6 },
-  { name: "Lethal Lava Land", category: "stage", official_course_number: 7 },
-  { name: "Shifting Sand Land", category: "stage", official_course_number: 8 },
-  { name: "Dire Dire Docks", category: "stage", official_course_number: 9 },
-  { name: "Snowman's Land", category: "stage", official_course_number: 10 },
-  { name: "Wet Dry World", category: "stage", official_course_number: 11 },
-  { name: "Tall, Tall Mountain", category: "stage", official_course_number: 12 },
-  { name: "Tiny Huge Island", category: "stage", official_course_number: 13 },
-  { name: "Tick Tock Clock", category: "stage", official_course_number: 14 },
-  { name: "Rainbow Ride", category: "stage", official_course_number: 15 },
-  { name: "Princess Peach's Secret Slide", category: "secret", official_course_number: 16 },
-  { name: "Aquarium", category: "secret", official_course_number: 17 },
-  { name: "Wing Cap", category: "secret", official_course_number: 18 },
-  { name: "Metal Cap", category: "secret", official_course_number: 19 },
-  { name: "Vanish Cap", category: "secret", official_course_number: 20 },
-  { name: "Bowser in the Dark World", category: "secret", official_course_number: 21 },
-  { name: "Bowser in the Fire Sea", category: "secret", official_course_number: 22 },
-  { name: "Bowser in the Sky", category: "secret", official_course_number: 23 },
-  { name: "Wing Mario over the Rainbow", category: "secret", official_course_number: 24 },
-  { name: "Castle Grounds", category: "secret", official_course_number: 25 }
+  # Seed to create Bob-omb Battlefield
+  { name: "Bob-omb Battlefield", category: "stage", official_course_number: 1, image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd5azDTQJkVvm87EAwi5JGrVkQXWKFFqyrRg&s", official_image_url: "https://mario.wiki.gallery/images/c/c1/Bob_omb_Battlefield_painting.png" },
+
+  # Seed to create Whomp's Fortress
+  { name: "Whomp's Fortress", category: "stage", official_course_number: 2, image_url: "https://cdn.rebrickable.com/media/thumbs/mocs/moc-90985.jpg/1000x800.jpg", official_image_url: "https://mario.wiki.gallery/images/e/ee/Whomps_Fortress_painting.png" },
+
+  # Seed to create Jolly Roger Bay
+  { name: "Jolly Roger Bay", category: "stage", official_course_number: 3, image_url: "https://gonintendo.com/uploads/story/promo_image/370995/3d.png", official_image_url: "https://mario.wiki.gallery/images/6/6c/SM64_JollyRogerBay_Painting_Other.png", ocean_owl_image_url: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/30e47412-4f61-4900-a575-39e0dff978bc/d9xakzm-109049ed-aca1-483e-ada1-ffc9f2467511.png/v1/fill/w_894,h_894/super_mario_64_dire_dire_docks_painting_by_theoceanowl_d9xakzm-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiJcL2ZcLzMwZTQ3NDEyLTRmNjEtNDkwMC1hNTc1LTM5ZTBkZmY5NzhiY1wvZDl4YWt6bS0xMDkwNDllZC1hY2ExLTQ4M2UtYWRhMS1mZmM5ZjI0Njc1MTEucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.hL4A_bUNy1p2TlHtJEgLTsaeTPgEAlFPdf7S1k7ow2E" },
+
+  # Seed to create Cool, Cool Mountain
+  { name: "Cool, Cool Mountain", category: "stage", official_course_number: 4, official_image_url: "https://mario.wiki.gallery/images/d/d6/Cool_Cool_Mountain_painting.png", ocean_owl_image_url: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/30e47412-4f61-4900-a575-39e0dff978bc/d9y9q5n-af1eca29-d827-4fa7-8ea1-e80603b6a27b.png/v1/fill/w_894,h_894/super_mario_64_snowman_s_land_painting_by_theoceanowl_d9y9q5n-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiJcL2ZcLzMwZTQ3NDEyLTRmNjEtNDkwMC1hNTc1LTM5ZTBkZmY5NzhiY1wvZDl5OXE1bi1hZjFlY2EyOS1kODI3LTRmYTctOGVhMS1lODA2MDNiNmEyN2IucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.v_jDRKGzmhtpBhkvhpgFCHP1rm7_OzK6VpnOOZAICXk" },
+
+  # Seed to create Big Boo's Haunt
+  { name: "Big Boo's Haunt", category: "stage", official_course_number: 5, official_image_url: "https://mario.wiki.gallery/images/6/6c/SM64_JollyRogerBay_Painting_Other.png" },
+
+  # Seed to create Hazy Maze Cave
+  { name: "Hazy Maze Cave", category: "stage", official_course_number: 6, official_image_url: "https://static.wikia.nocookie.net/sm64-conspicaries/images/6/67/HMC.png/revision/latest?cb=20210425183540" },
+
+  # Seed to create Lethal Lava Land
+  { name: "Lethal Lava Land", category: "stage", official_course_number: 7, official_image_url: "https://mario.wiki.gallery/images/e/e4/Lethal_Lava_Land_painting.png" },
+
+  # Seed to create Shifting Sand Land
+  { name: "Shifting Sand Land", category: "stage", official_course_number: 8, official_image_url: "https://mario.wiki.gallery/images/5/54/SM64_Asset_Texture_Castle_Wall_%28Basement%29.png" },
+
+  # Seed to create Dire Dire Docks
+  { name: "Dire Dire Docks", category: "stage", official_course_number: 9, official_image_url: "https://mario.wiki.gallery/images/8/88/SM64-Facing_Dire%2C_Dire_Docks.png" },
+
+  # Seed to create Snowman's Land
+  { name: "Snowman's Land", category: "stage", official_course_number: 10, official_image_url: "https://mario.wiki.gallery/images/e/e8/Snowman%27s_Land_Mirror_Room_Wall_Texture.png" },
+
+  # Seed to create Wet Dry World
+  { name: "Wet Dry World", category: "stage", official_course_number: 11, official_image_url: "https://mario.wiki.gallery/images/b/b6/Wet_Dry_World_painting.png" },
+
+  # Seed to create Tall, Tall Mountain
+  { name: "Tall, Tall Mountain", category: "stage", official_course_number: 12, official_image_url: "https://mario.wiki.gallery/images/f/fa/Tall_Tall_Mountain_painting.png" },
+
+  # Seed to create Tiny Huge Island
+  { name: "Tiny Huge Island", category: "stage", official_course_number: 13, official_image_url: "https://mario.wiki.gallery/images/3/3f/Tiny_Huge_Island_painting.png", ocean_owl_image_url: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/30e47412-4f61-4900-a575-39e0dff978bc/da1uju0-5d3ede07-ef10-4a9c-8748-f12b9fe3c2fa.png/v1/fill/w_1024,h_1024/super_mario_64_tiny_huge_island_painting_by_theoceanowl_da1uju0-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiJcL2ZcLzMwZTQ3NDEyLTRmNjEtNDkwMC1hNTc1LTM5ZTBkZmY5NzhiY1wvZGExdWp1MC01ZDNlZGUwNy1lZjEwLTRhOWMtODc0OC1mMTJiOWZlM2MyZmEucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.U9F-I4pXf9KEiBFTYApiA4tQlgHiwLg1nDQISHCtY74" },
+
+  # Seed to create Tick Tock Clock
+  { name: "Tick Tock Clock", category: "stage", official_course_number: 14, official_image_url: "https://mario.wiki.gallery/images/2/23/Tick_Tock_Clock_Painting.png" },
+  { name: "Rainbow Ride", category: "stage", official_course_number: 15, official_image_url: "", ocean_owl_image_url: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/30e47412-4f61-4900-a575-39e0dff978bc/da309zf-d2e94534-f915-4e11-841a-5d2397d3a7ac.png/v1/fill/w_894,h_894/super_mario_64___tick_tock_clock_painting_by_theoceanowl_da309zf-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiJcL2ZcLzMwZTQ3NDEyLTRmNjEtNDkwMC1hNTc1LTM5ZTBkZmY5NzhiY1wvZGEzMDl6Zi1kMmU5NDUzNC1mOTE1LTRlMTEtODQxYS01ZDIzOTdkM2E3YWMucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.GysZRgfkAqhVR0eWFGvaXH7Ork3HZqOoFQeCN5jy8WY" },
+
+  # Seed to create Princess Peach's Secret Slide
+
+  # Seed to create
+  { name: "Aquarium", category: "secret", official_course_number: 17, official_image_url: "https://sm64tracker.com/img/sa.png" },
+
+  # Seed to create Wing Cap
+  { name: "Wing Cap", category: "secret", official_course_number: 18, official_image_url: "https://static.wikia.nocookie.net/mario/images/9/99/Red_Block_SM64_artwork.png/revision/latest?cb=20230311151026" },
+
+  # Seed to create Metal Cap
+  { name: "Metal Cap", category: "secret", official_course_number: 19, official_image_url: "https://static.wikia.nocookie.net/mario/images/a/a4/Metal_Box_SSBB_artwork.png/revision/latest?cb=20230311142526" },
+
+  # Seed to create Vanish Cap
+  { name: "Vanish Cap", category: "secret", official_course_number: 20, image_url: "https://i.ytimg.com/vi/DhAwq4_b1aE/mqdefault.jpg", official_image_url: "https://i.pinimg.com/564x/16/82/d4/1682d41a6bacfb91e96e8f02865657db.jpg" },
+
+  # Seed to create Bowser in the Dark World
+  { name: "Bowser in the Dark World", category: "secret", official_course_number: 21, official_image_url: "https://preview.redd.it/i-recreated-the-paint-of-bowser-from-sm64-v0-mtu9hd4ehehd1.png?width=1080&crop=smart&auto=webp&s=08108785de18fe83549240a0c440ae769e8d16d5" },
+  { name: "Bowser in the Fire Sea", category: "secret", official_course_number: 22, official_image_url: "" },
+
+  # Seed to create Bowser in the Sky
+  { name: "Bowser in the Sky", category: "secret", official_course_number: 23, official_image_url: "" },
+
+  # Seed to create Wing Mario over the Rainbow
+  { name: "Wing Mario over the Rainbow", category: "secret", official_course_number: 24, official_image_url: "" },
+
+  # Seed to create Castle Grounds
+  { name: "Castle Grounds", category: "secret", official_course_number: 25, official_image_url: "" }
 ])
 
 ActiveRecord::Base.connection.execute("SELECT 1")
@@ -205,7 +249,7 @@ Star.create!([
 ])
 
 Run.create!([
-  # Level 1 Runs
+  # Bob-omb Battlefield runs
   { level_id: levels_by_course[1][:id], minutes: 4, seconds: 48, milliseconds: 15, date_performed: Date.new(2024, 11, 23) },
   { level_id: levels_by_course[1][:id], minutes: 4, seconds: 54, milliseconds: 30, date_performed: Date.new(2024, 11, 23) },
   { level_id: levels_by_course[1][:id], minutes: 5, seconds: 6, milliseconds: 82, date_performed: Date.new(2024, 11, 26) },
@@ -217,7 +261,7 @@ Run.create!([
   { level_id: levels_by_course[1][:id], minutes: 5, seconds: 29, milliseconds: 55, date_performed: Date.new(2024, 12, 28) },
   { level_id: levels_by_course[1][:id], minutes: 4, seconds: 32, milliseconds: 78, date_performed: Date.new(2025, 1, 3) },
 
-  # Level 2 Runs
+  # Whomp's Fortress runs
   { level_id: levels_by_course[2][:id], minutes: 2, seconds: 35, milliseconds: 87, date_performed: Date.new(2024, 11, 23) },
   { level_id: levels_by_course[2][:id], minutes: 2, seconds: 57, milliseconds: 87, date_performed: Date.new(2024, 11, 28) },
   { level_id: levels_by_course[2][:id], minutes: 2, seconds: 43, milliseconds: 78, date_performed: Date.new(2024, 11, 29) },
@@ -230,7 +274,7 @@ Run.create!([
   { level_id: levels_by_course[2][:id], minutes: 2, seconds: 27, milliseconds: 2, date_performed: Date.new(2024, 12, 28) },
   { level_id: levels_by_course[2][:id], minutes: 2, seconds: 37, milliseconds: 22, date_performed: Date.new(2024, 12, 28) },
 
-  # Level 3 Runs
+  # Jolly Roger Bay runs
   { level_id: levels_by_course[3][:id], minutes: 4, seconds: 47, milliseconds: 27, date_performed: Date.new(2024, 11, 20) },
   { level_id: levels_by_course[3][:id], minutes: 4, seconds: 3, milliseconds: 52, date_performed: Date.new(2024, 11, 20) },
   { level_id: levels_by_course[3][:id], minutes: 5, seconds: 15, milliseconds: 77, date_performed: Date.new(2024, 11, 23) },
