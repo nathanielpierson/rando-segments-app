@@ -12,3 +12,4 @@ json.runs                level.runs
 json.image_url           level.image_url
 json.official_image_url  level.official_image_url
 json.ocean_owl_image_url level.ocean_owl_image_url
+json.official_course_number level.official_course_number

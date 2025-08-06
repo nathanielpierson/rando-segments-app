@@ -1,8 +1,18 @@
 class LevelsController < ApplicationController
-  def index
-    @levels = Level.all
-    render :index
-  end
+def index
+  levels = Level.all
+  render json: levels.map { |level|
+    {
+      id: level.id,
+      name: level.name,
+      image_url: level.image_url.present? ? helpers.asset_url(level.image_url) : nil,
+      official_course_number: level.official_course_number,
+      fastest_time_milli: level.fastest_time_milli,
+      fastest_time_sec: level.fastest_time_sec,
+      fastest_time_min: level.fastest_time_min
+    }
+  }
+end
   def show
     @level = Level.find_by(id: params[:id])
     render :show

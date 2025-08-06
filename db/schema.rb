@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_05_27_213326) do
+ActiveRecord::Schema[8.0].define(version: 2025_08_06_033921) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -30,6 +30,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_27_213326) do
     t.integer "official_course_number"
     t.string "ocean_owl_image_url"
     t.string "official_image_url"
+    t.boolean "extra"
   end
 
   create_table "runs", force: :cascade do |t|
