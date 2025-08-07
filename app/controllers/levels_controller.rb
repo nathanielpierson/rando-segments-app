@@ -9,7 +9,8 @@ def index
       official_course_number: level.official_course_number,
       fastest_time_milli: level.fastest_time_milli,
       fastest_time_sec: level.fastest_time_sec,
-      fastest_time_min: level.fastest_time_min
+      fastest_time_min: level.fastest_time_min,
+      extra: level.extra
     }
   }
 end

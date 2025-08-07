@@ -9,6 +9,7 @@ json.avg_time_min        level.avg_time_min
 json.avg_time_sec        level.avg_time_sec
 json.avg_time_milli      level.avg_time_milli
 json.runs                level.runs
+json.extra               level.extra
 json.image_url           level.image_url
 json.official_image_url  level.official_image_url
 json.ocean_owl_image_url level.ocean_owl_image_url
