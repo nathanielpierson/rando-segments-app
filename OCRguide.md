@@ -1,0 +1,1 @@
+Images must be .TIFF
