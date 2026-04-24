@@ -63,4 +63,4 @@ group :test do
 end
 
 gem "rack-cors"
-gem "tesseract-ocr", "~> 0.1.8"
+gem "rtesseract", "~> 3.1", ">= 3.1.4"
