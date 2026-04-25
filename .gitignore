@@ -32,3 +32,7 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# Ignore massive folder of OCR test images
+
+app/assets/tesseract-test-images/rando-test-images
