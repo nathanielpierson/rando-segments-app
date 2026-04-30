@@ -35,4 +35,5 @@
 
 # Ignore massive folder of OCR test images
 
-app/assets/tesseract-test-images/rando-test-images
+app/assets/tesseract-test-images/
+app/assets/tesseract-test-images
