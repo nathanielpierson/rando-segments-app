@@ -64,3 +64,4 @@ end
 
 gem "rack-cors"
 gem "rtesseract", "~> 3.1", ">= 3.1.4"
+gem "mini_magick", "~> 5.3", ">= 5.3.1"
