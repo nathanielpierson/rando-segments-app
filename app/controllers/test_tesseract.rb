@@ -1,6 +1,7 @@
 require_relative "../../config/boot"
 require_relative "../../lib/rtesseract_executable"
 require "rtesseract"
+require "mini_magick"
 
 RTesseract.configure { |c| c.command = RtesseractExecutable.path }
 i = 0
@@ -28,7 +29,15 @@ while i < 16570
   image_path = File.expand_path("../assets/tesseract-test-images/tess-test-six/tess-test-six#{format('%05d', i)}.tif", __dir__)
   begin
     compound = RTesseract.new(image_path)
+    MiniMagick.configure do |config|
+  config.warnings = false
+    end
     image_text = compound.to_s
+    image = MiniMagick::Image.open(image_path)
+    image.format "png"
+    image.colorspace "Gray"
+    image.alpha "remove"
+    mean = image["%[mean]"]  # average brightness
     minutes = i / 300
     if minutes < 10
       minutes = "0" + minutes.to_s
@@ -85,8 +94,9 @@ while i < 16570
         contains_any?(image_text, clock_keywords)
         p "level: Tick Tock Clock, time: #{minutes}:#{seconds}"
       end
+    elsif mean.to_f < 10
+        p "black, #{mean} mean brightness"
     end
-
   rescue Errno::ENOENT, RTesseract::Error => e
   end
   i += 1
