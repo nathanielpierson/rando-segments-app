@@ -11,4 +11,8 @@ Rails.application.routes.draw do
   get "/runs/:id" => "runs#show"
   put "/runs" => "runs#create"
   patch "/runs/:id" => "runs#update"
+
+  get "/frames" => "frames#index"
+  get "/frames/:id" => "frames#show"
+  put "/frames" => "frames#create"
 end

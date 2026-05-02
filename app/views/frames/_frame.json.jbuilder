@@ -1,2 +1,4 @@
-json.extract! frame, :id, :created_at, :updated_at
-json.url frame_url(frame, format: :json)
+json.image_path  frame.image_path
+json.time        frame.time
+json.level_id    frame.level_id
+json.frame_type  frame.frame_type

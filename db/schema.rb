@@ -10,9 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_08_06_033921) do
+ActiveRecord::Schema[8.0].define(version: 2026_05_01_223814) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
+
+  create_table "frames", force: :cascade do |t|
+    t.string "image_path"
+    t.integer "level_id"
+    t.string "frame_type"
+    t.string "time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "levels", force: :cascade do |t|
     t.string "name"
