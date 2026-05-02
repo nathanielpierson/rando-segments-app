@@ -4,6 +4,14 @@ require_relative "../../lib/rtesseract_executable"
 require "rtesseract"
 require "mini_magick"
 
+def bump_current_frame!(image_path)
+  return unless File.file?(image_path)
+
+  record = CurrentFrame.first_or_initialize
+  record.image_url = image_path
+  record.save!
+end
+
 RTesseract.configure { |c| c.command = RtesseractExecutable.path }
 i = 0
 
@@ -27,15 +35,15 @@ def contains_any?(str, words)
   words.any? { |word| str.include?(word) }
 end
 while i < 16570
-  image_path = File.expand_path("../assets/tesseract-test-images/tess-test-six/tess-test-six#{format('%05d', i)}.tif", __dir__)
+  image_path = File.expand_path("../assets/tesseract-test-images/tess-png-test-six/tess-png-test-six#{format('%05d', i)}.png", __dir__)
   begin
+    bump_current_frame!(image_path)
     compound = RTesseract.new(image_path)
     MiniMagick.configure do |config|
   config.warnings = false
     end
     image_text = compound.to_s
     image = MiniMagick::Image.open(image_path)
-    image.format "png"
     image.colorspace "Gray"
     image.alpha "remove"
     mean = image["%[mean]"]  # average brightness
@@ -48,7 +56,7 @@ while i < 16570
       seconds = "0" + seconds.to_s
     end
     if image_text != ""
-      # p "image text: #{image_text} file name: #{File.basename(image_path)} time: #{minutes}:#{seconds}"
+      p "image text: #{image_text} file name: #{File.basename(image_path)} time: #{minutes}:#{seconds}"
       if
         contains_any?(image_text, battlefield_keywords)
         Frame.create(

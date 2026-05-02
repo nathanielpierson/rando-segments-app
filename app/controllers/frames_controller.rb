@@ -1,11 +1,15 @@
 class FramesController < ApplicationController
+  include ProjectImagePath
+
   def index
     @frames = Frame.all
     render :index
   end
+
   def show
     @frame = Frame.find_by(id: params[:id])
     render :show
+  end
   end
   def create
     @frame = Frame.create(

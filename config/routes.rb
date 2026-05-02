@@ -13,8 +13,9 @@ Rails.application.routes.draw do
   patch "/runs/:id" => "runs#update"
 
   get "/frames" => "frames#index"
+  get "/frames/:id/image" => "frames#image", as: :frame_image
   get "/frames/:id" => "frames#show"
   put "/frames" => "frames#create"
 
-  get "current-frame" =>
+  get "/rando-segments-frontend" => "rando_segments_frontend#show"
 end
