@@ -113,7 +113,7 @@ while i < 16570
        )
         p "level: Shifting Sand Land, time: #{minutes}:#{seconds}"
         i += 30
-      elsifncontains_any?(image_text, hazy_keywords)
+      elsif contains_any?(image_text, hazy_keywords)
         Frame.create(
         level_id: 6,
         image_path: image_path,

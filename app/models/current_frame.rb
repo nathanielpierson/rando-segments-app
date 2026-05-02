@@ -1,0 +1,2 @@
+class CurrentFrame < ApplicationRecord
+end

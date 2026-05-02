@@ -15,4 +15,6 @@ Rails.application.routes.draw do
   get "/frames" => "frames#index"
   get "/frames/:id" => "frames#show"
   put "/frames" => "frames#create"
+
+  get "current-frame" =>
 end

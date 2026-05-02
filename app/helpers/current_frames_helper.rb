@@ -1,0 +1,2 @@
+module CurrentFramesHelper
+end
